@@ -1,0 +1,343 @@
+body {
+  //background-color: #0D0C11;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  //color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.content {
+
+}
+
+body a{
+  //color: white; /* Черный цвет текста */
+  //font-weight: bold; /* Жирный шрифт */
+  text-decoration: none; /* Удаление подчеркивания */
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
+}
+
+.light-theme a, .light-theme svg{
+  color: black;
+}
+
+/* Стили для темной темы */
+.dark-theme {
+  background-color: #0D0C11;
+  color: #ffffff;
+  border-color: #ffffff;
+  
+}
+
+.dark-theme body{
+  background-color: #0D0C11;
+}
+
+.dark-theme a, .dark-theme svg{
+  color: white;
+}
+
+/*----------------------------------------
+-----------------HEADER------------------- 
+----------------------------------------*/
+
+header {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //background-color: #333;
+  //color: white;
+  padding: 10px 50px;
+  border-bottom: 1px solid;
+}
+
+header svg{
+  //padding-top: 20px;
+}
+
+.logo svg {
+  //color: white;
+  width: 30px; /* Укажите размеры вашей иконки */
+  height: 30px; /* Укажите размеры вашей иконки */
+}
+
+nav.main-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+nav.main-menu ul li {
+  margin-right: 50px;
+}
+
+nav.main-menu ul li:last-child {
+  //margin-right: 100px;
+}
+
+#Mylist {
+  //background-color: #0D0C11;
+  //color: white;
+  //font-weight: bold;
+  font-size: 18px;
+  border: 0;
+  //border-radius: 4px;
+  //width: auto; /* Ширина списка */
+}
+
+#dropdown button{
+  //background-color: #0D0C11;
+  //color: white;
+  padding: 8px;
+  font-size: 14px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  //width: 50px; /* Ширина списка */
+}
+
+/* Стили для опций выпадающего списка */
+#dropdown option {
+  //background-color: white;
+  //color: #333;
+}
+
+/*----------------------------------------
+-----------------MAIN--------------------- 
+----------------------------------------*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px;
+}
+
+.warapper {
+  width: 70%; /* Ширина левой части */
+  display: flex;
+  flex-direction: column; /* Строки идут вертикально */
+  justify-content: space-between;
+  align-items: left;
+  margin-bottom: 150px; /* Отступ между строками */
+
+}
+
+.warapper button {
+  font-weight: bold;
+  width: 110px;
+  height: 35px;
+  background-color: #E50914;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.category button {
+  margin: 0 10px;
+  min-width: 90px;
+  min-height: 30px;
+  background-color: #17161B;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.category button:hover,
+.pagination button:hover {
+  background-color: #E50914;
+}
+
+.category button.selected,
+.pagination button.selected {
+  background-color: #E50914;
+}
+
+.category-wrapper {
+  overflow-x: auto;
+}
+
+/* Стилизация полосы прокрутки для WebKit-браузеров */
+.category-wrapper::-webkit-scrollbar {
+  //width: 100px; /* Ширина полосы прокрутки */
+  height: 10px;
+}
+
+/* Стилизация трека (фона) прокрутки */
+.category-wrapper::-webkit-scrollbar-track {
+  background: #0D0C11; /* Цвет фона */
+}
+
+/* Стилизация полосы прокрутки */
+.category-wrapper::-webkit-scrollbar-thumb {
+  background: #222; /* Цвет полосы прокрутки */
+  border-radius: 100px; /* Скругление углов полосы прокрутки */
+}
+
+/* Изменение цвета при наведении на полосу прокрутки */
+.category-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+.category{
+  display: flex;
+  flex-direction: row;
+  padding: 25px 0;
+  border-bottom: 1px solid #aaa;
+}
+
+.movie-grid {
+  margin-top: 30px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Создание грида с колонками */
+  gap: 20px; /* Отступы между плитками */
+}
+
+.movie-tile {
+  border: 1px solid #999;
+  //padding: 10px;
+  position: relative;
+  display: inline-block;
+  //text-align: center;
+}
+
+
+.movie-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.movie-tile img, .movie-tile, .movie-info{
+  border-radius:10px;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)); /* Градиентный фон */
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex; /* Используем flexbox */
+  flex-direction: column; /* Столбцовая ориентация для размещения элементов в колонку */
+  justify-content: flex-end;
+}
+
+.movie-info h3, h2 {
+  margin: 5px 0;
+}
+
+.pagination {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  overflow-x: auto;
+}
+
+.pagination button{
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #17161B;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/*----------------------------------------
+-----------------FOOTER------------------- 
+----------------------------------------*/
+
+footer {
+  //background-color: #333;
+  //color: white;
+  padding: 15px 50px;
+  border-top: 1px solid #fff;
+  //text-align: center;
+  //background-color: black;
+}
+
+footer ul{
+  padding-left: 20px;
+}
+
+footer li{
+  padding-bottom: 5px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-content {
+    flex-direction: column; /* При нехватке места меняем направление оси */
+  }
+}
+
+.left-column {
+  max-width: 300px;
+  //flex: 1;
+}
+
+.right-columns {
+  display: flex;
+  justify-content: space-between;
+  //flex: 1;
+}
+
+.column {
+  margin-right: 20px;
+  text-align: left;
+}
+
+.centered-text {
+  //flex: 1;
+  text-align: center;
+}
+
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+*/

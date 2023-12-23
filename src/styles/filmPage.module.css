@@ -1,0 +1,56 @@
+
+
+.moviePage{
+    //background-color:black;
+    padding: 50px;
+}
+
+.coverInfo {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .coverInfo {
+      flex-direction: column; /* При нехватке места меняем направление оси */
+    }
+  }
+
+.coverInfo img{
+    border-radius: 15px
+}
+
+.placeholder {
+    width:230px;
+    height:345px;
+}
+
+.mainInfo {
+    padding-left: 30px;
+}
+
+.moviePage button{
+    font-weight: bold;
+    width: 110px;
+    height: 35px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.comments{
+    
+}
+
+.comments button{
+    margin: 0 10px;
+    min-width: 60px;
+    min-height: 20px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
